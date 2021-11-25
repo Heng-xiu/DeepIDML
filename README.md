@@ -1,6 +1,6 @@
 # DeepIDML
 
-[![npm](https://img.shields.io/npm/v/csstype.svg)](https://www.npmjs.com/package/deep-idml)
+[![npm](https://img.shields.io/npm/v/deep-idml.svg)](https://www.npmjs.com/package/deep-idml)
 
 DeepIDML is a parser focus on grabbing information from IDML file.
 
