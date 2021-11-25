@@ -3,7 +3,7 @@ import { FirstLineIndentStyleTransform } from './StyleTransformSet/FirstLineInde
 export class StyleTransformFactory {
   private static _instance: StyleTransformFactory;
   private static _styleTransfroms: {
-    readonly [key: string]: StyleTransformStrategy;
+    [key: string]: StyleTransformStrategy;
   };
   private constructor() {
     StyleTransformFactory._styleTransfroms = {
@@ -16,12 +16,12 @@ export class StyleTransformFactory {
     }
     return StyleTransformFactory._instance;
   }
-  static getStyleTransform(
+  getStyleTransform(
     styleTransfromIDEMLAttr: string
   ): StyleTransformStrategy {
     return StyleTransformFactory._styleTransfroms[styleTransfromIDEMLAttr];
   }
-  static getKey() {
+  getKey() {
     return Object.keys(StyleTransformFactory._styleTransfroms);
   }
 }

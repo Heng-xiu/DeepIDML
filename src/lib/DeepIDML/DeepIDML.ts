@@ -7,6 +7,7 @@ export class DeepIDML implements IDeepIDML {
   private xml = '';
   private json: object = {};
   private cssStyle: CSS.Properties = {};
+  private factory: StyleTransformFactory = StyleTransformFactory.getInstance();
 
   setXML(xmlString: string) {
     if (fxparser.validate(this.xml)) {
@@ -35,9 +36,9 @@ export class DeepIDML implements IDeepIDML {
     ) {
       this.parseXML();
     }
-    const mappingKeys = StyleTransformFactory.getKey();
-    mappingKeys.forEach((prop) => {
-      const factory = StyleTransformFactory.getStyleTransform(prop);
+    const mappingKeys = this.factory.getKey();
+    mappingKeys.forEach((prop: string) => {
+      const factory = this.factory.getStyleTransform(prop);
       const result = factory.transform(this.json, prop);
       this.cssStyle = { ...this.cssStyle, ...result };
     });
