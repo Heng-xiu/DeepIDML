@@ -4,7 +4,7 @@ export class FirstLineIndentStyleTransform implements StyleTransformStrategy {
   readonly IDMLAttr = '@_FirstLineIndent';
 
   transform(
-    jsonObj: { readonly ParagraphStyle: any },
+    jsonObj: any,
     propName: string
   ): object {
     if (propName !== this.IDMLAttr) return {};
