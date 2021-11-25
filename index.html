@@ -64,10 +64,30 @@
 	<div class="row">
 		<div class="col-8 col-content">
 			<div class="tsd-panel tsd-typography">
-				<a href="#deep-idml" id="deep-idml" style="color: inherit; text-decoration: none;">
-					<h1>deep-idml</h1>
+				<a href="#deepidml" id="deepidml" style="color: inherit; text-decoration: none;">
+					<h1>DeepIDML</h1>
 				</a>
-				<p>DeepIDML</p>
+				<p><a href="https://www.npmjs.com/package/deep-idml"><img src="https://img.shields.io/npm/v/csstype.svg" alt="npm"></a></p>
+				<p>DeepIDML is a parser focus on grabbing information from IDML file.</p>
+				<p><em>Usage</em></p>
+				<pre><code class="language-ts"><span class="hljs-keyword">import</span> { DeepIDML } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;deep-idml&#x27;</span>;
+
+<span class="hljs-keyword">const</span> paraXml: <span class="hljs-built_in">string</span> = <span class="hljs-string">`&lt;ParagraphStyle 
+  FillColor=&quot;Color/Black&quot; 
+  FontStyle=&quot;Regular&quot; 
+  PointSize=&quot;12&quot;&gt; 
+  &lt;/ParagraphStyle&gt;`</span>
+
+<span class="hljs-keyword">const</span> deeper: DeepIDML = <span class="hljs-keyword">new</span> DeepIDML();
+deeper.setXML(XMLdata);
+<span class="hljs-built_in">console</span>.log(deeper.getJSON());
+<span class="hljs-built_in">console</span>.log(deeper.getCss());
+</code></pre>
+				<a href="#getting-started" id="getting-started" style="color: inherit; text-decoration: none;">
+					<h2>Getting started</h2>
+				</a>
+				<pre><code class="language-sh">$ npm i deep-idml
+</code></pre>
 			</div>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
@@ -84,7 +104,16 @@
 						<a href="classes/deepidml.html" class="tsd-kind-icon">DeepIDML</a>
 					</li>
 					<li class=" tsd-kind-class">
+						<a href="classes/fillcolorstyletransform.html" class="tsd-kind-icon">Fill<wbr>Color<wbr>Style<wbr>Transform</a>
+					</li>
+					<li class=" tsd-kind-class">
 						<a href="classes/firstlineindentstyletransform.html" class="tsd-kind-icon">First<wbr>Line<wbr>Indent<wbr>Style<wbr>Transform</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/fontstyletransform.html" class="tsd-kind-icon">Font<wbr>Style<wbr>Transform</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/pointsizestyletransform.html" class="tsd-kind-icon">Point<wbr>Size<wbr>Style<wbr>Transform</a>
 					</li>
 					<li class=" tsd-kind-class">
 						<a href="classes/styletransformfactory.html" class="tsd-kind-icon">Style<wbr>Transform<wbr>Factory</a>
