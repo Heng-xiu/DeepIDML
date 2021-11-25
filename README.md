@@ -4,7 +4,7 @@
 
 DeepIDML is a parser focus on grabbing information from IDML file.
 
-*Usage*
+## Usage
 ```ts
 import { DeepIDML } from 'deep-idml';
 

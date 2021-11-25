@@ -18,7 +18,7 @@ export class StyleTransformFactory {
   };
   private constructor() {
     StyleTransformFactory._styleTransfroms = {
-      '@_Skew': new SkewStyleTransform(),
+    '@_Skew': new SkewStyleTransform(),
     '@_FontStyle': new FontStyleTransform(),
     '@_FirstLineIndent': new FirstLineIndentStyleTransform(),
     '@_FillColor': new FillColorStyleTransform(),

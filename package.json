@@ -15,7 +15,8 @@
   "keywords": [
     "IDML",
     "CSS",
-    "Indesign"
+    "Indesign",
+    "style"
   ],
   "scripts": {
     "build": "run-p build:*",
