@@ -1,4 +1,7 @@
+import { FillColorStyleTransform } from './StyleTransformSet/FillColorStyleTransform';
 import { FirstLineIndentStyleTransform } from './StyleTransformSet/FirstLineIndentStyleTransform';
+import { FontStyleTransform } from './StyleTransformSet/FontStyleTransform';
+import { PointSizeStyleTransform } from './StyleTransformSet/PointSizeStyleTransform';
 
 export class StyleTransformFactory {
   private static _instance: StyleTransformFactory;
@@ -8,6 +11,9 @@ export class StyleTransformFactory {
   private constructor() {
     StyleTransformFactory._styleTransfroms = {
       '@_FirstLineIndent': new FirstLineIndentStyleTransform(),
+      '@_FontStyle': new FontStyleTransform(),
+      '@_FillColor': new FillColorStyleTransform(),
+      '@_PointSize': new PointSizeStyleTransform(),
     };
   }
   static getInstance(): StyleTransformFactory {
