@@ -19,7 +19,14 @@ export class DeepIDML implements IDeepIDML {
     return this.xml;
   }
   parseXML() {
-    throw new Error('Method not implemented.');
+    const xmlParserOptions = {
+      ignoreAttributes: false,
+      attributeNamePrefix: '@_',
+    };
+    if (fxparser.validate(this.xml)) {
+      this.json = fxparser.parse(this.xml, xmlParserOptions);
+    } else {
+    }
   }
   convertStyleToCss() {
     if (
