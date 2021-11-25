@@ -1,7 +1,11 @@
 {
   "name": "deep-idml",
-  "version": "1.0.0",
-  "description": "DeepIDML",
+  "version": "1.0.1",
+  "description": "DeepIDML is a parser focus on grabbing information from IDML file.",
+  "author": {
+    "name": "Heng-Shiou Sheu",
+    "email": "hengshiousheu@gmail.com"
+  },
   "main": "build/main/index.js",
   "typings": "build/main/index.d.ts",
   "module": "build/module/index.js",
