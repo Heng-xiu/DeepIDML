@@ -1,6 +1,6 @@
 {
   "name": "deep-idml",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "DeepIDML is a parser focus on grabbing information from IDML file.",
   "author": {
     "name": "Heng-Shiou Sheu",

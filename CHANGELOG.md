@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.2](https://github.com/Heng-xiu/deep-idml/compare/v1.1.1...v1.1.2) (2021-11-25)
+
+
+### Bug Fixes
+
+* fix singleton factory ([6ce53d0](https://github.com/Heng-xiu/deep-idml/commit/6ce53d086b37ba1b94444934dd51735df408bf79))
+
 ### [1.1.1](https://github.com/Heng-xiu/deep-idml/compare/v1.1.0...v1.1.1) (2021-11-25)
 
 
