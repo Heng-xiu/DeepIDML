@@ -6,10 +6,11 @@
     "name": "Heng-Shiou Sheu",
     "email": "hengshiousheu@gmail.com"
   },
+  "homepage": "https://heng-xiu.github.io/DeepIDML/",
   "main": "build/main/index.js",
   "typings": "build/main/index.d.ts",
   "module": "build/module/index.js",
-  "repository": "https://github.com/Heng-xiu/deep-idml",
+  "repository": "https://github.com/Heng-xiu/DeepIDML",
   "license": "MIT",
   "keywords": [
     "IDML",
