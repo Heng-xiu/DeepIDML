@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/Heng-xiu/DeepIDML/compare/v1.1.2...v1.2.0) (2021-11-25)
+
+
+### Features
+
+* add new property ([58a2faf](https://github.com/Heng-xiu/DeepIDML/commit/58a2fafb2685c4b1ac4af0969b8406bff2eef3d7))
+
 ### [1.1.2](https://github.com/Heng-xiu/deep-idml/compare/v1.1.1...v1.1.2) (2021-11-25)
 
 
