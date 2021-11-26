@@ -8,6 +8,17 @@
 	<meta name="description" content="Documentation for deep-idml">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="assets/css/main.css">
+	<!-- Hotjar Tracking Code for My site -->
+	<script>
+		(function (h, o, t, j, a, r) {
+			h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
+			h._hjSettings = { hjid: 2720592, hjsv: 6 };
+			a = o.getElementsByTagName('head')[0];
+			r = o.createElement('script'); r.async = 1;
+			r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+			a.appendChild(r);
+		})(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+	</script>
 </head>
 
 <body>
@@ -70,7 +81,15 @@
 						<h1>DeepIDML</h1>
 					</a>
 					<p><a href="https://www.npmjs.com/package/deep-idml"><img
-								src="https://img.shields.io/npm/v/deep-idml.svg" alt="npm"></a></p>
+								src="https://img.shields.io/npm/v/deep-idml.svg?logo=npm" alt="NPM Version"></a>
+						<a href="https://npmjs.org/package/deep-idml"><img
+								src="https://img.shields.io/npm/dm/deep-idml.svg" alt="NPM Downloads"></a>
+						<a href="https://nodejs.org/en/download"><img
+								src="https://img.shields.io/node/v/deep-idml.svg?logo=node.js"
+								alt="Node.js Version"></a>
+						<a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-2ea44f?logo=license"
+								alt="License - MIT"></a>
+					</p>
 					<p>DeepIDML is a parser focus on grabbing information from IDML file.</p>
 					<a href="#usage" id="usage" style="color: inherit; text-decoration: none;">
 						<h2>Usage</h2>
@@ -93,6 +112,49 @@ deeper.setXML(XMLdata);
 					</a>
 					<pre><code class="language-sh">$ npm i deep-idml
 </code></pre>
+					<a href="#examples" id="examples" style="color: inherit; text-decoration: none;">
+						<h2>Examples</h2>
+					</a>
+					<p>In most situations, any information about styles are in the Resources/Styles.xml which unzip from
+						IDML file.
+						And the snippet shows as below:</p>
+					<pre><code class="language-ts">&lt;idPkg:Styles&gt;
+    ...
+    &lt;RootParagraphStyleGroup Self=<span class="hljs-string">&quot;u74&quot;</span>&gt;
+        <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">ParagraphStyle</span> <span class="hljs-attr">Self</span>=<span class="hljs-string">&quot;ParagraphStyle/Table%3a12-13w table (7/9 80%25)&quot;</span> <span class="hljs-attr">Name</span>=<span class="hljs-string">&quot;Table:12-13w table (7/9 80%)&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">Properties</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">BasedOn</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;object&quot;</span>&gt;</span>ParagraphStyle/Table%3a12-13 table (7/9 80%25)<span class="hljs-tag">&lt;/<span class="hljs-name">BasedOn</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">Properties</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">ParagraphStyle</span>&gt;</span></span>
+    &lt;/RootParagraphStyleGroup&gt;
+    ...
+&lt;/idPkg:Styles&gt;
+</code></pre>
+					<p>With DeepIDML, people can simply set Resources/Style.xml file as prarmete into funciton, and it
+						will return parsed css property</p>
+					<pre><code class="language-ts"><span class="hljs-keyword">const</span> deeper: DeepIDML = <span class="hljs-keyword">new</span> DeepIDML();
+<span class="hljs-keyword">const</span> parsedCssProps = deeper.getTraversaledParagraphStyleGroups(paraXml);
+<span class="hljs-built_in">console</span>.log(parsedCssProps);
+
+<span class="hljs-comment">// Result </span>
+<span class="hljs-string">&#x27;Table:12-13w table (7/9 80%)&#x27;</span>: {
+    <span class="hljs-attr">transform</span>: <span class="hljs-string">&#x27;skewX(0)&#x27;</span>,
+    <span class="hljs-string">&#x27;font-style&#x27;</span>: <span class="hljs-string">&#x27;Regular&#x27;</span>,
+    <span class="hljs-string">&#x27;text-indent&#x27;</span>: <span class="hljs-string">&#x27;0px&#x27;</span>,
+    <span class="hljs-attr">color</span>: <span class="hljs-string">&#x27;Black&#x27;</span>,
+    <span class="hljs-attr">letterSpacing</span>: <span class="hljs-string">&#x27;0&#x27;</span>,
+    <span class="hljs-attr">textDecoration</span>: <span class="hljs-string">&#x27;underline&#x27;</span>,
+    <span class="hljs-attr">fontSize</span>: <span class="hljs-string">&#x27;7&#x27;</span>,
+    <span class="hljs-attr">textAlign</span>: <span class="hljs-string">&#x27;left&#x27;</span>,
+    <span class="hljs-attr">marginLeft</span>: <span class="hljs-string">&#x27;0&#x27;</span>,
+    <span class="hljs-attr">marginRight</span>: <span class="hljs-string">&#x27;0&#x27;</span>,
+    <span class="hljs-string">&#x27;@_BasedOn&#x27;</span>: <span class="hljs-string">&#x27;Table:12-13 table (7/9 80%)&#x27;</span>
+  },
+</code></pre>
+					<a href="#license" id="license" style="color: inherit; text-decoration: none;">
+						<h2>License</h2>
+					</a>
+					<p><a href="LICENSE">MIT</a></p>
 				</div>
 			</div>
 			<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
@@ -108,6 +170,9 @@ deeper.setXML(XMLdata);
 						<li class=" tsd-kind-enum">
 							<a href="enums/justification_enumvalue.html"
 								class="tsd-kind-icon">Justification_<wbr><wbr>Enum<wbr>Value</a>
+						</li>
+						<li class=" tsd-kind-class">
+							<a href="classes/basedontransform.html" class="tsd-kind-icon">Based<wbr>OnTransform</a>
 						</li>
 						<li class=" tsd-kind-class">
 							<a href="classes/deepidml.html" class="tsd-kind-icon">DeepIDML</a>
@@ -216,12 +281,6 @@ deeper.setXML(XMLdata);
 	</div>
 	<div class="overlay"></div>
 	<script src="assets/js/main.js"></script>
-	<a title="Real Time Web Analytics" href="http://clicky.com/101343622"><img alt="Clicky"
-			src="//static.getclicky.com/media/links/badge.gif" border="0" /></a>
-	<script async src="//static.getclicky.com/101343622.js"></script>
-	<noscript>
-		<p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/101343622ns.gif" /></p>
-	</noscript>
 </body>
 
 </html>

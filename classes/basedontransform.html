@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>UnderlineStyleTransform | deep-idml</title>
+	<title>BasedOnTransform | deep-idml</title>
 	<meta name="description" content="Documentation for deep-idml">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,10 +56,10 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="underlinestyletransform.html">UnderlineStyleTransform</a>
+					<a href="basedontransform.html">BasedOnTransform</a>
 				</li>
 			</ul>
-			<h1>Class UnderlineStyleTransform</h1>
+			<h1>Class BasedOnTransform</h1>
 		</div>
 	</div>
 </header>
@@ -70,7 +70,7 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">UnderlineStyleTransform</span>
+						<span class="target">BasedOnTransform</span>
 					</li>
 				</ul>
 			</section>
@@ -87,14 +87,15 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="underlinestyletransform.html#idmlattr" class="tsd-kind-icon">IDMLAttr</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="basedontransform.html#idmlattr" class="tsd-kind-icon">IDMLAttr</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="underlinestyletransform.html#transform" class="tsd-kind-icon">transform</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="underlinestyletransform.html#transformv2" class="tsd-kind-icon">transform<wbr>V2</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="basedontransform.html#extractsubstring" class="tsd-kind-icon">extract<wbr>Substring</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="basedontransform.html#transform" class="tsd-kind-icon">transform</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="basedontransform.html#transformv2" class="tsd-kind-icon">transform<wbr>V2</a></li>
 							</ul>
 						</section>
 					</div>
@@ -105,10 +106,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="idmlattr" class="tsd-anchor"></a>
 					<h3>IDMLAttr</h3>
-					<div class="tsd-signature tsd-kind-icon">IDMLAttr<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;@_Underline&quot;</span></div>
+					<div class="tsd-signature tsd-kind-icon">IDMLAttr<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;@_BasedOn&quot;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Heng-xiu/DeepIDML/blob/1f4eae3/src/lib/styleTransfrom/StyleTransformSet/UnderlineStyleTransform.ts#L5">lib/styleTransfrom/StyleTransformSet/UnderlineStyleTransform.ts:5</a></li>
+							<li>Defined in <a href="https://github.com/Heng-xiu/DeepIDML/blob/1f4eae3/src/lib/styleTransfrom/StyleTransformSet/BasedOnTransform.ts#L3">lib/styleTransfrom/StyleTransformSet/BasedOnTransform.ts:3</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -116,22 +117,45 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="transform" class="tsd-anchor"></a>
-					<h3>transform</h3>
+					<a name="extractsubstring" class="tsd-anchor"></a>
+					<h3>extract<wbr>Substring</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">transform<span class="tsd-signature-symbol">(</span>jsonObj<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, propName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span></li>
+						<li class="tsd-signature tsd-kind-icon">extract<wbr>Substring<span class="tsd-signature-symbol">(</span>str<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Heng-xiu/DeepIDML/blob/1f4eae3/src/lib/styleTransfrom/StyleTransformSet/UnderlineStyleTransform.ts#L7">lib/styleTransfrom/StyleTransformSet/UnderlineStyleTransform.ts:7</a></li>
+									<li>Defined in <a href="https://github.com/Heng-xiu/DeepIDML/blob/1f4eae3/src/lib/styleTransfrom/StyleTransformSet/BasedOnTransform.ts#L12">lib/styleTransfrom/StyleTransformSet/BasedOnTransform.ts:12</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>jsonObj: <span class="tsd-signature-type">any</span></h5>
+									<h5>str: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="transform" class="tsd-anchor"></a>
+					<h3>transform</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">transform<span class="tsd-signature-symbol">(</span>jsonObj<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span>, propName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/Heng-xiu/DeepIDML/blob/1f4eae3/src/lib/styleTransfrom/StyleTransformSet/BasedOnTransform.ts#L5">lib/styleTransfrom/StyleTransformSet/BasedOnTransform.ts:5</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>jsonObj: <span class="tsd-signature-type">object</span></h5>
 								</li>
 								<li>
 									<h5>propName: <span class="tsd-signature-type">string</span></h5>
@@ -151,7 +175,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Heng-xiu/DeepIDML/blob/1f4eae3/src/lib/styleTransfrom/StyleTransformSet/UnderlineStyleTransform.ts#L16">lib/styleTransfrom/StyleTransformSet/UnderlineStyleTransform.ts:16</a></li>
+									<li>Defined in <a href="https://github.com/Heng-xiu/DeepIDML/blob/1f4eae3/src/lib/styleTransfrom/StyleTransformSet/BasedOnTransform.ts#L19">lib/styleTransfrom/StyleTransformSet/BasedOnTransform.ts:19</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -182,9 +206,27 @@
 					<li class=" tsd-kind-enum">
 						<a href="../enums/justification_enumvalue.html" class="tsd-kind-icon">Justification_<wbr><wbr>Enum<wbr>Value</a>
 					</li>
-					<li class=" tsd-kind-class">
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-class">
 						<a href="basedontransform.html" class="tsd-kind-icon">Based<wbr>OnTransform</a>
+						<ul>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="basedontransform.html#idmlattr" class="tsd-kind-icon">IDMLAttr</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="basedontransform.html#extractsubstring" class="tsd-kind-icon">extract<wbr>Substring</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="basedontransform.html#transform" class="tsd-kind-icon">transform</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="basedontransform.html#transformv2" class="tsd-kind-icon">transform<wbr>V2</a>
+							</li>
+						</ul>
 					</li>
+				</ul>
+				<ul class="after-current">
 					<li class=" tsd-kind-class">
 						<a href="deepidml.html" class="tsd-kind-icon">DeepIDML</a>
 					</li>
@@ -221,24 +263,9 @@
 					<li class=" tsd-kind-class">
 						<a href="underlineoffsetstyletransform.html" class="tsd-kind-icon">Underline<wbr>Offset<wbr>Style<wbr>Transform</a>
 					</li>
-				</ul>
-				<ul class="current">
-					<li class="current tsd-kind-class">
+					<li class=" tsd-kind-class">
 						<a href="underlinestyletransform.html" class="tsd-kind-icon">Underline<wbr>Style<wbr>Transform</a>
-						<ul>
-							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="underlinestyletransform.html#idmlattr" class="tsd-kind-icon">IDMLAttr</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="underlinestyletransform.html#transform" class="tsd-kind-icon">transform</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="underlinestyletransform.html#transformv2" class="tsd-kind-icon">transform<wbr>V2</a>
-							</li>
-						</ul>
 					</li>
-				</ul>
-				<ul class="after-current">
 					<li class=" tsd-kind-class">
 						<a href="underlineweightstyletransform.html" class="tsd-kind-icon">Underline<wbr>Weight<wbr>Style<wbr>Transform</a>
 					</li>
