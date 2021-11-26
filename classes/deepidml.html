@@ -97,10 +97,14 @@
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="deepidml.html#convertstyletocss" class="tsd-kind-icon">convert<wbr>Style<wbr>ToCss</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="deepidml.html#converttocss" class="tsd-kind-icon">convert<wbr>ToCss</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="deepidml.html#getcss" class="tsd-kind-icon">get<wbr>Css</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="deepidml.html#getjson" class="tsd-kind-icon">getJSON</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="deepidml.html#getxml" class="tsd-kind-icon">getXML</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="deepidml.html#handleproperties" class="tsd-kind-icon">handle<wbr>Properties</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="deepidml.html#parsedefaultparagraphstylegroups" class="tsd-kind-icon">parse<wbr>Default<wbr>Paragraph<wbr>Style<wbr>Groups</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="deepidml.html#parsexml" class="tsd-kind-icon">parseXML</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="deepidml.html#parsexmltojson" class="tsd-kind-icon">parseXMLToJSON</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="deepidml.html#setxml" class="tsd-kind-icon">setXML</a></li>
 							</ul>
 						</section>
@@ -115,7 +119,7 @@
 					<div class="tsd-signature tsd-kind-icon">css<wbr>Style<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Properties</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Heng-xiu/DeepIDML/blob/bb34274/src/lib/DeepIDML/DeepIDML.ts#L9">lib/DeepIDML/DeepIDML.ts:9</a></li>
+							<li>Defined in <a href="https://github.com/Heng-xiu/DeepIDML/blob/841311e/src/lib/DeepIDML/DeepIDML.ts#L15">lib/DeepIDML/DeepIDML.ts:15</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -125,7 +129,7 @@
 					<div class="tsd-signature tsd-kind-icon">factory<span class="tsd-signature-symbol">:</span> <a href="styletransformfactory.html" class="tsd-signature-type">StyleTransformFactory</a><span class="tsd-signature-symbol"> = StyleTransformFactory.getInstance()</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Heng-xiu/DeepIDML/blob/bb34274/src/lib/DeepIDML/DeepIDML.ts#L10">lib/DeepIDML/DeepIDML.ts:10</a></li>
+							<li>Defined in <a href="https://github.com/Heng-xiu/DeepIDML/blob/841311e/src/lib/DeepIDML/DeepIDML.ts#L16">lib/DeepIDML/DeepIDML.ts:16</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -135,7 +139,7 @@
 					<div class="tsd-signature tsd-kind-icon">json<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Heng-xiu/DeepIDML/blob/bb34274/src/lib/DeepIDML/DeepIDML.ts#L8">lib/DeepIDML/DeepIDML.ts:8</a></li>
+							<li>Defined in <a href="https://github.com/Heng-xiu/DeepIDML/blob/841311e/src/lib/DeepIDML/DeepIDML.ts#L14">lib/DeepIDML/DeepIDML.ts:14</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -145,7 +149,7 @@
 					<div class="tsd-signature tsd-kind-icon">xml<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;&quot;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Heng-xiu/DeepIDML/blob/bb34274/src/lib/DeepIDML/DeepIDML.ts#L7">lib/DeepIDML/DeepIDML.ts:7</a></li>
+							<li>Defined in <a href="https://github.com/Heng-xiu/DeepIDML/blob/841311e/src/lib/DeepIDML/DeepIDML.ts#L13">lib/DeepIDML/DeepIDML.ts:13</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -162,10 +166,33 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Heng-xiu/DeepIDML/blob/bb34274/src/lib/DeepIDML/DeepIDML.ts#L32">lib/DeepIDML/DeepIDML.ts:32</a></li>
+									<li>Defined in <a href="https://github.com/Heng-xiu/DeepIDML/blob/841311e/src/lib/DeepIDML/DeepIDML.ts#L65">lib/DeepIDML/DeepIDML.ts:65</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="converttocss" class="tsd-anchor"></a>
+					<h3>convert<wbr>ToCss</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">convert<wbr>ToCss<span class="tsd-signature-symbol">(</span>json<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/Heng-xiu/DeepIDML/blob/841311e/src/lib/DeepIDML/DeepIDML.ts#L46">lib/DeepIDML/DeepIDML.ts:46</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>json: <span class="tsd-signature-type">any</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -179,7 +206,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Heng-xiu/DeepIDML/blob/bb34274/src/lib/DeepIDML/DeepIDML.ts#L57">lib/DeepIDML/DeepIDML.ts:57</a></li>
+									<li>Defined in <a href="https://github.com/Heng-xiu/DeepIDML/blob/841311e/src/lib/DeepIDML/DeepIDML.ts#L90">lib/DeepIDML/DeepIDML.ts:90</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Properties</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">0</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -196,7 +223,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Heng-xiu/DeepIDML/blob/bb34274/src/lib/DeepIDML/DeepIDML.ts#L46">lib/DeepIDML/DeepIDML.ts:46</a></li>
+									<li>Defined in <a href="https://github.com/Heng-xiu/DeepIDML/blob/841311e/src/lib/DeepIDML/DeepIDML.ts#L79">lib/DeepIDML/DeepIDML.ts:79</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">object</span></h4>
@@ -213,10 +240,56 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Heng-xiu/DeepIDML/blob/bb34274/src/lib/DeepIDML/DeepIDML.ts#L19">lib/DeepIDML/DeepIDML.ts:19</a></li>
+									<li>Defined in <a href="https://github.com/Heng-xiu/DeepIDML/blob/841311e/src/lib/DeepIDML/DeepIDML.ts#L25">lib/DeepIDML/DeepIDML.ts:25</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="handleproperties" class="tsd-anchor"></a>
+					<h3>handle<wbr>Properties</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">handle<wbr>Properties<span class="tsd-signature-symbol">(</span>styleValue<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/Heng-xiu/DeepIDML/blob/841311e/src/lib/DeepIDML/DeepIDML.ts#L98">lib/DeepIDML/DeepIDML.ts:98</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>styleValue: <span class="tsd-signature-type">any</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">object</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="parsedefaultparagraphstylegroups" class="tsd-anchor"></a>
+					<h3>parse<wbr>Default<wbr>Paragraph<wbr>Style<wbr>Groups</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">parse<wbr>Default<wbr>Paragraph<wbr>Style<wbr>Groups<span class="tsd-signature-symbol">(</span>xml<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/Heng-xiu/DeepIDML/blob/841311e/src/lib/DeepIDML/DeepIDML.ts#L113">lib/DeepIDML/DeepIDML.ts:113</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>xml: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -230,10 +303,33 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Heng-xiu/DeepIDML/blob/bb34274/src/lib/DeepIDML/DeepIDML.ts#L22">lib/DeepIDML/DeepIDML.ts:22</a></li>
+									<li>Defined in <a href="https://github.com/Heng-xiu/DeepIDML/blob/841311e/src/lib/DeepIDML/DeepIDML.ts#L28">lib/DeepIDML/DeepIDML.ts:28</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="parsexmltojson" class="tsd-anchor"></a>
+					<h3>parseXMLToJSON</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">parseXMLToJSON<span class="tsd-signature-symbol">(</span>xml<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/Heng-xiu/DeepIDML/blob/841311e/src/lib/DeepIDML/DeepIDML.ts#L37">lib/DeepIDML/DeepIDML.ts:37</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>xml: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -247,7 +343,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Heng-xiu/DeepIDML/blob/bb34274/src/lib/DeepIDML/DeepIDML.ts#L12">lib/DeepIDML/DeepIDML.ts:12</a></li>
+									<li>Defined in <a href="https://github.com/Heng-xiu/DeepIDML/blob/841311e/src/lib/DeepIDML/DeepIDML.ts#L18">lib/DeepIDML/DeepIDML.ts:18</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -272,6 +368,9 @@
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
+					<li class=" tsd-kind-enum">
+						<a href="../enums/justification_enumvalue.html" class="tsd-kind-icon">Justification_<wbr><wbr>Enum<wbr>Value</a>
+					</li>
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-class">
@@ -293,6 +392,9 @@
 								<a href="deepidml.html#convertstyletocss" class="tsd-kind-icon">convert<wbr>Style<wbr>ToCss</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="deepidml.html#converttocss" class="tsd-kind-icon">convert<wbr>ToCss</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="deepidml.html#getcss" class="tsd-kind-icon">get<wbr>Css</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
@@ -302,7 +404,16 @@
 								<a href="deepidml.html#getxml" class="tsd-kind-icon">getXML</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="deepidml.html#handleproperties" class="tsd-kind-icon">handle<wbr>Properties</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="deepidml.html#parsedefaultparagraphstylegroups" class="tsd-kind-icon">parse<wbr>Default<wbr>Paragraph<wbr>Style<wbr>Groups</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="deepidml.html#parsexml" class="tsd-kind-icon">parseXML</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="deepidml.html#parsexmltojson" class="tsd-kind-icon">parseXMLToJSON</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="deepidml.html#setxml" class="tsd-kind-icon">setXML</a>
@@ -321,16 +432,46 @@
 						<a href="fontstyletransform.html" class="tsd-kind-icon">Font<wbr>Style<wbr>Transform</a>
 					</li>
 					<li class=" tsd-kind-class">
+						<a href="justificationstyletransform.html" class="tsd-kind-icon">Justification<wbr>Style<wbr>Transform</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="leftindentstyletransform.html" class="tsd-kind-icon">Left<wbr>Indent<wbr>Style<wbr>Transform</a>
+					</li>
+					<li class=" tsd-kind-class">
 						<a href="pointsizestyletransform.html" class="tsd-kind-icon">Point<wbr>Size<wbr>Style<wbr>Transform</a>
 					</li>
 					<li class=" tsd-kind-class">
+						<a href="rightindentstyletransform.html" class="tsd-kind-icon">Right<wbr>Indent<wbr>Style<wbr>Transform</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="skewstyletransform.html" class="tsd-kind-icon">Skew<wbr>Style<wbr>Transform</a>
+					</li>
+					<li class=" tsd-kind-class">
 						<a href="styletransformfactory.html" class="tsd-kind-icon">Style<wbr>Transform<wbr>Factory</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="trackingstyletransform.html" class="tsd-kind-icon">Tracking<wbr>Style<wbr>Transform</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="underlineoffsetstyletransform.html" class="tsd-kind-icon">Underline<wbr>Offset<wbr>Style<wbr>Transform</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="underlinestyletransform.html" class="tsd-kind-icon">Underline<wbr>Style<wbr>Transform</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="underlineweightstyletransform.html" class="tsd-kind-icon">Underline<wbr>Weight<wbr>Style<wbr>Transform</a>
 					</li>
 					<li class=" tsd-kind-type-alias">
 						<a href="../globals.html#ideepidml" class="tsd-kind-icon">IDeepIDML</a>
 					</li>
 					<li class=" tsd-kind-type-alias">
 						<a href="../globals.html#styletransformstrategy" class="tsd-kind-icon">Style<wbr>Transform<wbr>Strategy</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="../globals.html#paragraphstylerecord" class="tsd-kind-icon">para<wbr>Graph<wbr>Style<wbr>Record</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="../globals.html#propertiesrecord" class="tsd-kind-icon">properties<wbr>Record</a>
 					</li>
 					<li class=" tsd-kind-function">
 						<a href="../globals.html#asyncabc" class="tsd-kind-icon">asyncABC</a>
