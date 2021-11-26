@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.3.1](https://github.com/Heng-xiu/DeepIDML/compare/v1.3.0...v1.3.1) (2021-11-26)
+
+
+### Bug Fixes
+
+* **deepidml functionality:** add new feature to parse raw IDML file directly, and extracting paragra ([8f3a056](https://github.com/Heng-xiu/DeepIDML/commit/8f3a056124d66b2bca5a6f17f7a4648c0513c0b7))
+
 ## [1.3.0](https://github.com/Heng-xiu/DeepIDML/compare/v1.2.1...v1.3.0) (2021-11-25)
 
 
