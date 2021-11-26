@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.4.0](https://github.com/Heng-xiu/DeepIDML/compare/v1.3.1...v1.4.0) (2021-11-26)
+
+
+### Features
+
+* **deepidml:** provide getTraversaledParagraphStyleGroups ([d388b35](https://github.com/Heng-xiu/DeepIDML/commit/d388b3574ef1053a27008f84ed3b9625546cc730))
+* process basedOn property into merged styles ([71ffb78](https://github.com/Heng-xiu/DeepIDML/commit/71ffb78e34ca252cd136af153b5f93d20ff173e0))
+
 ### [1.3.1](https://github.com/Heng-xiu/DeepIDML/compare/v1.3.0...v1.3.1) (2021-11-26)
 
 
