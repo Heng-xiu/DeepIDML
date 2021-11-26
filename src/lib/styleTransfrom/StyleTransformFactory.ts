@@ -1,3 +1,4 @@
+import { BasedOnTransform } from './StyleTransformSet/BasedOnTransform';
 import { FillColorStyleTransform } from './StyleTransformSet/FillColorStyleTransform';
 import { FirstLineIndentStyleTransform } from './StyleTransformSet/FirstLineIndentStyleTransform';
 import { FontStyleTransform } from './StyleTransformSet/FontStyleTransform';
@@ -30,6 +31,7 @@ export class StyleTransformFactory {
     '@_Justification': new JustificationStyleTransform(),
     '@_LeftIndent': new LeftIndentStyleTransform(),
     '@_RightIndent': new RightIndentStyleTransform(),
+    '@_BasedOn': new BasedOnTransform(),
     };
   }
   static getInstance(): StyleTransformFactory {

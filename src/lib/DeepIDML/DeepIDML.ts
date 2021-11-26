@@ -134,4 +134,64 @@ export class DeepIDML implements IDeepIDML {
     });
     return this.convertToCss(defaultParaStyleMapList);
   }
+  // parse custom paragraph style groups
+  parseCustomParagraphStyleGroups(xml: string) {
+    const jObj = this.parseXMLToJSON(xml);
+    const customParaStyleGroup = jObj['idPkg:Styles']['RootParagraphStyleGroup']['ParagraphStyleGroup'];
+    let customParaStyleMapList: paraGraphStyleRecord = {};
+    Object.keys(customParaStyleGroup).forEach((key) => {
+      //let groupName = customParaStyleGroup[key]['@_Name'].split('/')[1];
+      let paragraphStyleList = customParaStyleGroup[key]['ParagraphStyle'];
+      if (typeof paragraphStyleList[0] !== 'object') {
+        let styleName = paragraphStyleList['@_Name'];
+        let styleValue = paragraphStyleList;
+        let properties = this.handleProperties(styleValue);
+        if (styleValue.hasOwnProperty('Properties')) {
+          delete styleValue['Properties'];
+        }
+        let tmpStyle: paraGraphStyleRecord = {
+          [styleName]: { ...styleValue, ...properties },
+        };
+        customParaStyleMapList = { ...customParaStyleMapList, ...tmpStyle };
+      } else {
+        Object.keys(paragraphStyleList).forEach((ele) => {
+          let styleName = paragraphStyleList[ele]['@_Name'];
+          let styleValue = paragraphStyleList[ele];
+          let properties = this.handleProperties(styleValue);
+          if (styleValue.hasOwnProperty('Properties')) {
+            delete styleValue['Properties'];
+          }
+          let tmpStyle: paraGraphStyleRecord = {
+            [styleName]: { ...styleValue, ...properties },
+          };
+          customParaStyleMapList = { ...customParaStyleMapList, ...tmpStyle };
+        });
+      }
+    });
+    return this.convertToCss(customParaStyleMapList);
+  }
+  // parse all paragraph style groups
+  parseParagraphStyleGroups(xml: string) {
+    const defaultStyleGroups = this.parseDefaultParagraphStyleGroups(xml);
+    const customStyleGroups = this.parseCustomParagraphStyleGroups(xml);
+    return { ...defaultStyleGroups, ...customStyleGroups };
+  }
+  // traversal tree structure to merge styles into one object
+  traversalParagraphStyleGroups(tree: any, styles: any): any {
+    if(!tree[styles].hasOwnProperty('@_BasedOn')){
+      return tree[styles];
+    }
+    const prevStyles = this.traversalParagraphStyleGroups(tree, tree[styles]['@_BasedOn']);
+    const currStyle = tree[styles]
+    return {...prevStyles, ...currStyle};
+  }
+  getTraversaledParagraphStyleGroups(xml: string) {
+    let tmpStyleMap: any = {};
+    const allStyleGroups = this.parseParagraphStyleGroups(xml);
+    Object.entries(allStyleGroups).forEach(([key, _]) => {
+      const traversaledResult = this.traversalParagraphStyleGroups(allStyleGroups, key)
+      tmpStyleMap[key] = traversaledResult
+    });
+    return tmpStyleMap
+  }
 }
