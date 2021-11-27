@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.5.0](https://github.com/Heng-xiu/DeepIDML/compare/v1.4.0...v1.5.0) (2021-11-27)
+
+
+### Features
+
+* add properties ([c77045e](https://github.com/Heng-xiu/DeepIDML/commit/c77045e9fd21ff5d684d9b722e7ef8882352bba8))
+* add spaceBefore and SpaceAfter feature-convertion ([5f7df2d](https://github.com/Heng-xiu/DeepIDML/commit/5f7df2ddccbe0a5fac1873f907db46e7ce445e58))
+
 ## [1.4.0](https://github.com/Heng-xiu/DeepIDML/compare/v1.3.1...v1.4.0) (2021-11-26)
 
 
