@@ -18,7 +18,7 @@ const paraXml: string = `<ParagraphStyle
   </ParagraphStyle>`
 
 const deeper: DeepIDML = new DeepIDML();
-deeper.setXML(XMLdata);
+deeper.setXML(paraXml);
 console.log(deeper.getJSON());
 console.log(deeper.getCss());
 
@@ -47,7 +47,7 @@ And the snippet shows as below:
 </idPkg:Styles>
 ```
 
-With DeepIDML, people can simply set Resources/Style.xml file as prarmete into funciton, and it will return parsed css property
+With DeepIDML, people can simply set Resources/Style.xml file as parameter into function, and it will return parsed css property
 ```ts
 const deeper: DeepIDML = new DeepIDML();
 const parsedCssProps = deeper.getTraversaledParagraphStyleGroups(paraXml);
