@@ -194,4 +194,22 @@ export class DeepIDML implements IDeepIDML {
     });
     return tmpStyleMap
   }
+  styleToCSS(testJSON: object){
+    let cssFile = '';
+    Object.entries(testJSON).map(([paraKey, paraValue]) => {
+      let result = Object.entries(paraValue).reduce((acc, [styleKey, styleValue]) => {
+        if(styleKey.includes('@_')){
+          return acc;
+        }
+        acc += styleKey.split(/(?=[A-Z])/).join('-').toLowerCase() + ':' + styleValue + ';'
+        return acc;
+      }, '');
+      cssFile += `\n` + `.${paraKey} { ${result} }`;
+    })
+    return cssFile
+  }
+  getCSSFromXML(xml: string) {
+    const traversaledStyleMap = this.getTraversaledParagraphStyleGroups(xml);
+    return this.styleToCSS(traversaledStyleMap);
+  }
 }
