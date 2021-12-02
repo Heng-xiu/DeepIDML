@@ -11,7 +11,7 @@ export class FirstLineIndentStyleTransform implements StyleTransformStrategy {
     if (propName !== this.IDMLAttr) return {};
     const value = jsonObj['ParagraphStyle'][propName];
     const style: CSS.Properties & CSS.PropertiesHyphen = {
-      'text-indent': `${value}px`,
+      textIndent: `${value}px`,
     };
     return style;
   }
@@ -19,7 +19,7 @@ export class FirstLineIndentStyleTransform implements StyleTransformStrategy {
     if (propName !== this.IDMLAttr) return {};
     const value = jsonObj[propName];
     const style: CSS.Properties & CSS.PropertiesHyphen = {
-      'text-indent': `${value}px`,
+      textIndent: `${value}px`,
     };
     return style;
   }

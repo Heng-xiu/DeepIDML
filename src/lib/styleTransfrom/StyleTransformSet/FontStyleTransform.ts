@@ -8,7 +8,7 @@ export class FontStyleTransform implements StyleTransformStrategy {
         if (propName !== this.IDMLAttr) return {};
         const SkewValue = jsonObj['ParagraphStyle'][propName];
         let style: CSS.Properties & CSS.PropertiesHyphen = {
-        'font-style': `${SkewValue}`,
+            fontStyle: `${SkewValue}`,
         };
         return style;
     }
@@ -16,7 +16,7 @@ export class FontStyleTransform implements StyleTransformStrategy {
         if (propName !== this.IDMLAttr) return {};
         const SkewValue = jsonObj[propName];
         let style: CSS.Properties & CSS.PropertiesHyphen = {
-        'font-style': `${SkewValue}`,
+            fontStyle: `${SkewValue}`,
         };
         return style;
     }
