@@ -69,6 +69,32 @@ console.log(parsedCssProps);
   },
 ```
 
+## Other APIS(experiments)
+```ts
+import { DeepIDML } from 'deep-idml';
+
+const styleXMLString: string = fs.readFileSync('./Resources/styles.xml', 'utf8');
+
+const deeper: DeepIDML = new DeepIDML();
+const css = deeper.getCSSFromXML(styleXMLString);
+
+// Result 
+.Table:10-11 table 03 DL (7/9 90%) { 
+  transform:skewX(0);
+  font-style:Regular;
+  text-indent:0px;
+  color:Black;
+  letter-spacing:0;
+  text-decoration:underline;
+  font-size:7;
+  text-align:left;
+  margin-left:0;
+  margin-right:0;
+  font-family:CompositeFont/$ID/宋+Times;
+  margin-top:0;margin-bottom:0; 
+}
+```
+
 
 ## License
 
