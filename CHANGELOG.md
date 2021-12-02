@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.6.0](https://github.com/Heng-xiu/DeepIDML/compare/v1.5.0...v1.6.0) (2021-12-02)
+
+
+### Features
+
+* 給予 styles.xml 檔案，能夠回覆paragraphstyle in css format ([2f4371b](https://github.com/Heng-xiu/DeepIDML/commit/2f4371bdcd791ef220ffc2ed70eb2ddbea54e4c0))
+
 ## [1.5.0](https://github.com/Heng-xiu/DeepIDML/compare/v1.4.0...v1.5.0) (2021-11-27)
 
 
